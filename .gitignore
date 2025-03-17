@@ -1,0 +1,68 @@
+<<<<<<< HEAD
+# 🐍 Virtuelle Umgebung ignorieren
+venv/
+.Venv/
+env/
+ENV/
+=======
+venv
+.venv
+venv/
+.venv/
+
+
+>>>>>>> db103b4 (Removed venv from Git tracking)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+<<<<<<< HEAD
+# 📦 Abhängigkeitsdateien (Falls generiert)
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 🏗 PyQt6-Designer generierte Dateien
+=======
+# Qt Designer Build-Dateien (falls generiert)
+>>>>>>> db103b4 (Removed venv from Git tracking)
+*.ui~
+*.qrc~
+*.pyc
+*.pyo
+
+<<<<<<< HEAD
+# 📂 IDE- und Editor-spezifische Dateien
+.vscode/
+.idea/
+*.iml
+
+# 📝 Lokale Umgebungsvariablen und Logs
+.env
+*.env
+logs/
+*.log
+*.swp
+*.swo
+
+# 🏛 Flask Debug- und Instanz-Dateien
+instance/
+*.sqlite3
+*.db
+
+# 🔬 Testdateien und Jupyter Notebooks
+.ipynb_checkpoints/
+__pycache__/
+
+# 🍏 MacOS spezifische Dateien
+.DS_Store
+
+# 🐧 Linux Backup-Dateien
+*.bak
+*~
+=======
+# Flask Debug-Dateien
+instance/
+*.sqlite3
+*.db
+>>>>>>> db103b4 (Removed venv from Git tracking)

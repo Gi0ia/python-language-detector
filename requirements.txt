@@ -1,0 +1,5 @@
+flask
+iso-639
+requests
+langdetect
+PyQt6
