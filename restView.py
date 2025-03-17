@@ -38,9 +38,10 @@ class View(QMainWindow):
         Returns:
             str: der Eingegebene Text
         """
-        text = self.inputTxt.toPlainText().strip()
-        print(f"DEBUG: Eingabetext = '{text}'")  # <-- Debugging
-        return text
+        #text = self.inputTxt.toPlainText().strip()
+        # print(f"DEBUG: Eingabetext = '{text}'")  # <-- Debugging
+        #return text
+        return self.inputTxt.toPlainText().strip() # stripe entfernt alle Zeilenumbrüche & Leerzeichen am Anfang / Ende
 
     def set_result(self, result):
         """
@@ -54,9 +55,9 @@ class View(QMainWindow):
         else:
             reliable = "Yes" if result['reliable'] else "No"
             text = (
-                f"Language: <b>{result['language']}</b>\n"
-                f"Short Code: <b>{result['short']}</b>\n"
-                f"Propability: <b>{result['prob']}%</b>\n"
+                f"Language: <b>{result['language']}</b><br>"
+                f"Short Code: <b>{result['short']}</b><br>"
+                f"Propability: <b>{result['prob']}%</b><br>"
                 f"Reliable: <b>{reliable}</b>"
             )
             self.resultTxt.setHtml(text)
