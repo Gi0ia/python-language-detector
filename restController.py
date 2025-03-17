@@ -21,12 +21,12 @@ class Controller:
         input_text = self.view.get_intput()
         if input_text:
             try:
-                result = self.view.model.detect_language(input_text)
+                result = self.model.detect_language(input_text)
                 self.view.set_result(result)
             except ValueError as e:
-                self.view.set_result(e)
+                self.view.set_result({"error": str(e)})
         else:
-            self.view.set_result("Error: No text provided")
+            self.view.set_result({"error": "No text provided"}) 
 
     def reset(self):
         """

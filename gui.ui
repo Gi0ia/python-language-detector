@@ -32,7 +32,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="resultTxt"/>
+      <widget class="QTextEdit" name="inputTxt"/>
      </item>
      <item>
       <widget class="QLabel" name="resultLabel">
@@ -42,7 +42,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="inputTxt"/>
+      <widget class="QTextEdit" name="resultTxt"/>
      </item>
     </layout>
    </widget>

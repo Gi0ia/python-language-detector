@@ -26,7 +26,7 @@ class RESTClient:
                 return {"error": f"Fehler: {response.status_code}"}
 
         except Exception as e:
-            return {"error": strg(e)}
+            return {"error": str(e)}
 
 if __name__=="__main__":
     print(RESTClient.detect_language("Ho fame, mio marito?"))

@@ -2,13 +2,16 @@ import sys
 import requests
 from PyQt6 import QtWidgets, uic
 
+from PyQt6.QtWidgets import QMainWindow
+
+
 import restController
 
 class View(QMainWindow):
     """
     View Klasse für das Language Programm
     """
-    def __init__(self, c: controller):
+    def __init__(self, c: restController):
         """
         Konstruktor der View Klasse, lädt das ui file & initialisiert die Buttons
         """
@@ -19,8 +22,8 @@ class View(QMainWindow):
         self.setWindowTitle("Language Detection - Gioia Frolik")
 
 
-        self.resultTxt.setReadOnly(False)    # Eingabe soll editierbar sein
-        self.inputTxt.setReadOnly(True)      # Ergebnisfeld soll nicht editierbar sein
+        self.resultTxt.setReadOnly(True)      # Ergebnisfeld soll nicht editierbar sein
+        self.inputTxt.setReadOnly(False)      # Eingabe soll editierbar sein
             
 
         # setzten der Button Funktionen
@@ -35,8 +38,10 @@ class View(QMainWindow):
         Returns:
             str: der Eingegebene Text
         """
-        return self.inputTxt.toPlainText().strip() # entfert Leerzeichen am Anfang/Ende
-    
+        text = self.inputTxt.toPlainText().strip()
+        print(f"DEBUG: Eingabetext = '{text}'")  # <-- Debugging
+        return text
+
     def set_result(self, result):
         """
         Setzt das Result Text Feld
